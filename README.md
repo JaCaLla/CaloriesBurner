@@ -9,7 +9,7 @@ This repository contains a sample watchOS application designed for health monito
 Check out the app in action!  
 ![CombineAPIRrest Sample App review](media/review.gif)  
 
-[Youtube](https://youtu.be/KQC92SKTqRg)
+[Youtube](https://youtu.be/IG_S0xKiWUQ)
 
 ## Requirements
 

@@ -8,14 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var healthkitManager = appSingletons.healthkitManager
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Group {
+                Text(healthkitManager.heartRate)
+                Text(healthkitManager.caloriesBurned)
+            }
+            .font(.largeTitle)
+
+            if [.notStarted, .ended].contains(healthkitManager.workoutSessionState)  {
+                Button("Start") {
+                    Task {
+                        await  healthkitManager.startWorkoutSession()
+                    }
+                   
+                }
+            } else if healthkitManager.workoutSessionState == .started {
+                Button("Finish") {
+                    Task {
+                        await  healthkitManager.stopWorkoutSession()
+                    }
+                }
+            }
+            Text("\(healthkitManager.workoutSessionState.rawValue)")
         }
         .padding()
+        .onAppear() {
+            Task {
+                await healthkitManager.requestAuthorization()
+            }
+        }
     }
 }
 
