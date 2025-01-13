@@ -1,7 +1,7 @@
 
-# CombineAPIRrest
+# CaloriesBurner
 
-This repository contains a sample watchOS application designed for health monitoring during workout sessions. It demonstrates how to retrieve the heart rate and calories burned in real-time. This code serves as the foundation for the following post: [watchOS App for Health Monitoring Essentials](https://javios.eu/swift/harnessing-nfc-technology-in-your-ios-app/).
+This repository contains a sample watchOS application designed for health monitoring during workout sessions. It demonstrates how to retrieve the heart rate and calories burned in real-time. This code serves as the foundation for the following post: [watchOS App for Health Monitoring Essentials](https://javios.eu/swift/watchos-app-for-health-monitoring-essentials/).
 
 
 ## 🎥 Demo Video
